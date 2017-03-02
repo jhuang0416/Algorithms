@@ -36,7 +36,7 @@ var insert = function(array, rightIndex, value) {
     return array;
 };
 
-var array = [3, 5, 7, 11, 13, 2, 9, 6];
+/*var array = [3, 5, 7, 11, 13, 2, 9, 6];
 
 insert(array, 4, 2);
 console.log("Array after inserting 2:  " + array);
@@ -50,3 +50,23 @@ insert(array, 6, 6);
 console.log("Array after inserting 6:  " + array);
 //Program.assertEqual(array, [2, 3, 5, 6, 7, 9, 11, 13]);
 
+*/
+
+/*var insertionSort = function(array) {
+    for (var key = 1, RI = 0; key < array.length; key++, RI++) {
+        insert(array, RI, array[key]);
+    }
+};
+
+*/
+
+var insertionSort = function(array) {
+    for (var i= 0; i< array.length; i++) {
+        insert(array, i, array[i + 1]);
+    }
+};
+
+var array = [22, 11, 99, 88, 9, 7, 42];
+insertionSort(array);
+console.log("Array after sorting:  " + array);
+//Program.assertEqual(array, [7, 9, 11, 22, 42, 88, 99]);
